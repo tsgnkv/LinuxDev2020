@@ -4,7 +4,7 @@
 AC_PREREQ([2.69])
 AC_INIT([guess_number], [0.0.1], [atsygankov@hotmail.com])
 AM_INIT_AUTOMAKE([foreign])
-DX_INIT_DOXYGEN(suess_number)
+DX_INIT_DOXYGEN(guess_number)
 AC_CONFIG_SRCDIR([guess_number.c])
 AC_CONFIG_HEADERS([config.h])
 

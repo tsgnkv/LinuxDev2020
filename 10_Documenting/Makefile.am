@@ -19,3 +19,5 @@ clean:
 	rm -rf ru
 	rm messages.new.pot
 	rm guess_number
+
+all-local: doxygen-doc
