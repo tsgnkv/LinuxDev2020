@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  09_I18nL10n\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-11-21 12:32+0000\n"
+"POT-Creation-Date: 2020-11-21 13:26+0000\n"
 "PO-Revision-Date: 2020-11-14 14:22+0000\n"
 "Last-Translator: root <root@made>\n"
 "Language-Team: Russian\n"
@@ -18,28 +18,59 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
-#. Welcome message
-#: guess_number.c:42
+#: guess_number.c:159
+#, c-format
+msgid ""
+"      Guessing number game - guess your number in decimal or roman numbers\n"
+"      \n"
+"      Usage: guess_number [OPTIONS]\n"
+"      \n"
+"      \t--help\t\tprint this help\n"
+"      \t-r\t\tenter in roman-number mode\n"
+"    "
+msgstr ""
+"      Программа угадай число - угадывает числа от 1 до 100 в десятичном и римском форматах\n"
+"      \n"
+"      Использование: guess_number [ОПЦИИ]\n"
+"      \n"
+"      \t--help\t\tпечать информации о программе\n"
+"      \t-r\t\tвключение режима римских чисел\n"
+"    "
+
+#: guess_number.c:176
+#, c-format
+msgid "Guess a number from I to C and I'l try to guess it\n"
+msgstr "Загадайте число от I до C и я попробую его угадать\n"
+
+#: guess_number.c:178
 #, c-format
 msgid "Guess a number from 1 to 100 and I'l try to guess it\n"
 msgstr "Загадайте число от 1 до 100 и я попробую его угадать\n"
 
-#. Question
-#: guess_number.c:53
+#: guess_number.c:192
+#, c-format
+msgid "Is your number greater than %s? Answer %s or %s: "
+msgstr "Ваше число больше %s? Ответьте %s или %s: "
+
+#: guess_number.c:192 guess_number.c:194 guess_number.c:200
+msgid "y"
+msgstr "д"
+
+#: guess_number.c:192 guess_number.c:194 guess_number.c:202
+msgid "n"
+msgstr "н"
+
+#: guess_number.c:194
 #, c-format
 msgid "Is your number greater than %d? Answer %s or %s: "
 msgstr "Ваше число больше %d? Ответьте %s или %s: "
 
-#: guess_number.c:53 guess_number.c:57
-msgid "y"
-msgstr "д"
+#: guess_number.c:209
+#, c-format
+msgid "Your number id %s\n"
+msgstr "Ваше число %s\n"
 
-#: guess_number.c:53 guess_number.c:59
-msgid "n"
-msgstr "н"
-
-#. Answer
-#: guess_number.c:65
+#: guess_number.c:211
 #, c-format
 msgid "Your number id %d\n"
 msgstr "Ваше число %d\n"
