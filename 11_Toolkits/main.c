@@ -5,11 +5,11 @@ const int MAX_LENGTH = 80;
 const char* DELIMETER  = " ";
 
 gboolean finder(gpointer key, gpointer value, gpointer user_data) {
-	return !g_ascii_strcasecmp(key, user_data);
+  return !g_ascii_strcasecmp(key, user_data);
 }
 
 void print(gpointer key, gpointer value, gpointer user_data) {
- printf("%s\t%d\n", (char* )key, *(gint*)value);
+  printf("%s\t%d\n", (char* )key, *(gint*)value);
 }
 
 int main(int argc, char** argv) {
@@ -46,7 +46,7 @@ int main(int argc, char** argv) {
       }
     }
     g_strfreev(words); 
-	}
+  }
 
   g_hash_table_foreach(counter, print, NULL);
   g_hash_table_destroy(counter);
