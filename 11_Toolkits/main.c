@@ -4,12 +4,20 @@
 const int MAX_LENGTH = 80;
 const char* DELIMETER  = " ";
 
-gboolean finder(gpointer key, gpointer value, gpointer user_data) {
-  return !g_ascii_strcasecmp(key, user_data);
+gboolean finder(gpointer key, gpointer value, gpointer word) {
+  return !g_ascii_strcasecmp(key, word);
 }
 
-void print(gpointer key, gpointer value, gpointer user_data) {
-  printf("%s\t%d\n", (char* )key, *(gint*)value);
+gint compare_function(gconstpointer a, gconstpointer b, gpointer counter) {
+  gpointer a_ptr = g_hash_table_find(counter, (GHRFunc)finder, (gpointer)a);
+  gpointer b_ptr = g_hash_table_find(counter, (GHRFunc)finder, (gpointer)b);
+
+  return *(gint* )b_ptr - *(gint* )a_ptr;
+}
+
+void print(gpointer word, gpointer counter) {
+  gpointer count = g_hash_table_find(counter, (GHRFunc)finder, word);
+  printf("%s\t%d\n", (char* )word, *(gint* )count);
 }
 
 int main(int argc, char** argv) {
@@ -48,7 +56,12 @@ int main(int argc, char** argv) {
     g_strfreev(words); 
   }
 
-  g_hash_table_foreach(counter, print, NULL);
+  GList* sorted_words = g_hash_table_get_keys(counter);
+  sorted_words = g_list_sort_with_data(sorted_words, (GCompareDataFunc)compare_function, counter);
+
+  g_list_foreach(sorted_words, print, counter);
+
+  g_list_free(sorted_words);
   g_hash_table_destroy(counter);
   return 0;
 }
