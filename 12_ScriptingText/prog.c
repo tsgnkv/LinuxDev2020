@@ -1,4 +1,4 @@
-/* COMMENT:: prog, 0.0.1: Fri Dec  4 21:25:41 UTC 2020 */
+/* COMMENT:: prog, 0.0.1: Fri Dec  4 21:29:40 UTC 2020 */
 #include <stdio.h>
 #include "outlib.h"
 
