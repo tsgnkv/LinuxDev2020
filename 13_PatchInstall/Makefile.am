@@ -1,5 +1,9 @@
+AM_CPPFLAGS = LOCALEDIR='"$(localedir)"'
+
 bin_PROGRAMS=guess_number
+
 pkgdata_DATA=ru/LC_MESSAGES/guess_number.mo
+pkgdatadir = $(localedir)/ru/LC_MESSAGES
 
 ru/LC_MESSAGES/guess_number.mo: ru.po
 	mkdir -p `dirname $@`

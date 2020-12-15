@@ -2,7 +2,7 @@
 # Process this file with autoconf to produce a configure script.
 
 AC_PREREQ([2.69])
-AC_INIT([guess_number], [0.0.1], [atsygankov@hotmail.com], [guess_number])
+AC_INIT([guess_number], [0.0.1], [atsygankov@hotmail.com], [guessnumber])
 AM_INIT_AUTOMAKE([foreign])
 AC_CONFIG_SRCDIR([guess_number.c])
 AC_CONFIG_HEADERS([config.h])
